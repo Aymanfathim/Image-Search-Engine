@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="contain">
+      <h2 class="color-cycle" style="display: flex; align-items: center;"><span>Aymzz</span>Art</h2>
+      <div class="hero-title">Welcome to My Art Gallery</div>
+      <div class="sub-heading">Where every color tells a story.</div>
+      <input type="text" id="searchBox" placeholder="Search...">
+    </div>
+
+    <div class="gallery" id="gallery">
+
+      <!-- 🔳 Square Paintings -->
+      <div class="image-box square" data-name="Moon light , Ship , boat , blacn n white">
+        <img src="Ship.jpg" alt="Golden Frame">
+        <p>Moonlight </p>
+      </div>
+      <div class="image-box square" data-name="Patriotism , The National flag , Flag , India ">
+        <img src="Flag.jpg" alt="The Maze">
+        <p>Patriotism</p>
+      </div>
+      <div class="image-box square" data-name="Bonding , friends , friendship , sisters , Girl in gown">
+        <img src="Friends.jpg" alt="Twilight Edge">
+        <p>Friends Forever</p>
+      </div>
+      <div class="image-box square" data-name="sunset , golden hour">
+        <img src="Golden Hour.jpg" alt="Cubic Dreams">
+        <p>Golden Hour</p>
+      </div>
+
+      <!-- 🟪 Horizontal Rectangle Paintings -->
+      <div class="image-box horizontal" data-name="Eiffel Tower, sunset, trees, skyline, birds, cityscape">
+        <img src="Eiffel Tower.jpg" alt="Sunset Glory">
+        <p>The Eiffel Tower</p>
+      </div>
+      <div class="image-box horizontal" data-name=" abstract, pattern, black and white, leaves, symmetry, optical art">
+        <img src="Abstratc Pattern.jpg" alt="Mountain Breeze">
+        <p>Symmetric Leaves</p>
+      </div>
+
+      <div class="image-box horizontal"
+        data-name="Islamic calligraphy, Allah name, spiritual art, colorful background, rainbow effect, faith, Arabic calligraphy">
+        <img src="Allah.jpg" alt="Skyline Dreams">
+        <p>Divine Radiance</p>
+      </div>
+      <div class="image-box horizontal"
+        data-name="line art, geometry, spiral, abstract, illusion, minimal, square painting">
+        <img src="Illusion Art.jpg" alt="Ocean Haze">
+        <p>Illusional Square</p>
+      </div>
+      <div class="image-box horizontal"
+        data-name="Father's Day art, pencil sketch, emotional drawing, parent and child, hand-drawn love, Abbu Mubarak ho, flower decor">
+        <img src="Dad Daughter.jpg" alt="Bridge Reflections">
+        <p>A Father's World</p>
+      </div>
+      <div class="image-box horizontal" data-name="blossom tree, nature art, spring branches, pink flower, ">
+        <img src="Flower.jpg" alt="Golden Horizon">
+        <p>Spring Time</p>
+      </div>
+
+      <!-- 🟥 Vertical Rectangle Paintings -->
+      <div class="image-box vertical" data-name="Boat , Sunset ">
+        <img src="Boat.jpg" alt="The Watcher">
+        <p>Voyage at Dusk</p>
+      </div>
+      <div class="image-box vertical"
+        data-name="rose with raindrops, red flower, realistic drawing, emotional art, nature beauty, floral sketch,">
+        <img src="Rose.jpg" alt="Standing Tall">
+        <p>Red Rose Bloom</p>
+      </div>
+      
+      <div class="image-box vertical"
+        data-name="sunset landscape, tree silhouettes, evening light, orange-blue sky, water reflection, peaceful nature, dusk view">
+        <img src="Sea Sunset.jpg" alt="Dreamy Falls">
+        <p>Golden Hour's Reflection</p>
+      </div>
+      <div class="image-box vertical"
+        data-name=" urban night, loneliness, silence, cityscape, crescent moon, purple sky, solitude, dreamy street lights">
+        <img src="City.jpg" alt="Lonely Light">
+        <p>City Skyline</p>
+      </div>
+      <div class="image-box vertical"
+        data-name=" time, sunrise sunset, hourglass art, day and night, dreamscape, reflection of life">
+        <img src="Hour Glass.jpg" alt="Mystic Stairs">
+        <p>Timeless Day n Night</p>
+      </div>
+      <div class="image-box vertical" data-name="cartoon bird,character sketch, anger,red bird,">
+        <img src="Angry Bird.jpg" alt="Hidden Door">
+        <p>Angry Bird</p>
+      </div>
+      <div class="image-box vertical"
+        data-name="motivational quote,inspirational art,hand-lettered quote,colorful background,never give up,great things take time,positivity, patience and perseverance">
+        <img src="Quote.jpg" alt="Framed Silence">
+        <p>Motivational Quote</p>
+      </div>
+      <div class="image-box vertical"
+        data-name="cherry painting, fruit splash, red cherries, black background, juicy fruit, pop art style, abstract fruit">
+        <img src="Cherry.jpg" alt="Spirit of Forest">
+        <p>Cherry Splash</p>
+      </div>
+
+    </div>
+  </div>
+  <script>
+    const searchBox = document.getElementById("searchBox");
+    const images = document.querySelectorAll(".image-box");
+
+    searchBox.addEventListener("input", () => {
+      const value = searchBox.value.toLowerCase();
+      images.forEach(image => {
+        const name = image.getAttribute("data-name").toLowerCase();
+        image.style.display = name.includes(value) ? "block" : "none";
+      });
+    });
+
+  </script>
+</body>
+
+</html>
